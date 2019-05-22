@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: hangmanclient.authentication.controller.SignUpControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec - in hangmanclient.authentication.controller.SignUpControllerTest

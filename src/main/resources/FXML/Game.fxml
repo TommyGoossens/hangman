@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangmanclient.hangman.controller.HangmanController">
+   <children>
+       <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints maxHeight="251.0" minHeight="200.0" prefHeight="239.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="283.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="122.0" minHeight="0.0" prefHeight="102.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <AnchorPane>
+            <Label layoutX="14.0" layoutY="31.0" text="Creator:" />
+            <Label fx:id="lblCreatorName" layoutX="65.0" layoutY="31.0" text="name" />
+            <Label layoutX="197.0" layoutY="31.0" text="Mistakes:" />
+            <Label fx:id="lblMistakes" layoutX="262.0" layoutY="31.0" text="0/0" />
+            <GridPane layoutX="-6.0" layoutY="218.0" prefHeight="15.0" prefWidth="303.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblHiddenWord" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+            <ImageView fx:id="imgSupportBeam" fitHeight="93.0" fitWidth="67.0" layoutX="105.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/supportbeam.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgFloor" fitHeight="8.0" fitWidth="44.0" layoutX="83.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/floor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPole" fitHeight="132.0" fitWidth="57.0" layoutX="95.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/pole.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgRope" fitHeight="87.0" fitWidth="43.0" layoutX="163.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/rope.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgBeam" fitHeight="96.0" fitWidth="125.0" layoutX="92.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/beam.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgNeck" fitHeight="8.0" fitWidth="6.0" layoutX="161.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/neck.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgHead" fitHeight="88.0" fitWidth="63.0" layoutX="151.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/head.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLeftEye" fitHeight="37.0" fitWidth="5.0" layoutX="159.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/eye.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgRightEye" fitHeight="8.0" fitWidth="5.0" layoutX="167.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/eye.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgMouth" fitHeight="8.0" fitWidth="8.0" layoutX="161.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/mouth.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLeftArm" fitHeight="60.0" fitWidth="52.0" layoutX="138.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/leftarm.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgBody" fitHeight="68.0" fitWidth="38.0" layoutX="162.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/body.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLeftLeg" fitHeight="47.0" fitWidth="38.0" layoutX="145.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/leftleg.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgRightArm" fitHeight="60.0" fitWidth="44.0" layoutX="167.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/rightarm.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgRightLeg" fitHeight="53.0" fitWidth="32.0" layoutX="167.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/hangmanparts/rightleg.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnLeaveGame" layoutY="1.0" mnemonicParsing="false" text="Leave" />
+           </AnchorPane>
+         <GridPane GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+             <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Label text="Wrong letters:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               <Label fx:id="lblWrongLetters" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            </children>
+         </GridPane>
+         <GridPane GridPane.rowIndex="2">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+             <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <TextField fx:id="tfInputChar" minWidth="75.0" prefHeight="27.0" prefWidth="75.0">
+                  <GridPane.margin>
+                     <Insets left="75.0" right="75.0" />
+                  </GridPane.margin>
+               </TextField>
+               <Label text="Enter text:">
+                  <GridPane.margin>
+                     <Insets left="5.0" />
+                  </GridPane.margin>
+               </Label>
+               <Button fx:id="btnConfirmChar" mnemonicParsing="false" text="Confirm" GridPane.halignment="RIGHT">
+                  <GridPane.margin>
+                     <Insets right="5.0" />
+                  </GridPane.margin>
+               </Button>
+               <Line endX="150.36643981933594" endY="-34.6335563659668" startX="-148.92645263671875" startY="-33.926448822021484" GridPane.valignment="TOP" />
+               <Button fx:id="btnGuessWord" mnemonicParsing="false" text="I know the word!" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            </children>
+         </GridPane>
+       </GridPane>
+   </children>
+</AnchorPane>

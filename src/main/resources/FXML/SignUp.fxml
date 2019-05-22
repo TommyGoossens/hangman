@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="420.0" minHeight="420.0" prefHeight="420.0" prefWidth="390.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangmanclient.authentication.controller.SignUpController">
+   <children>
+      <GridPane prefHeight="420.0" prefWidth="390.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" percentWidth="0.0" prefWidth="20.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="320.0" prefWidth="320.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" prefWidth="350.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Username" />
+                  <Label text="Password" GridPane.rowIndex="2" />
+                  <TextField fx:id="tfUsername" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfPassword" accessibleRole="PASSWORD_FIELD" GridPane.rowIndex="3" />
+                  <GridPane GridPane.rowIndex="6">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="169.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_cancel" mnemonicParsing="false" onAction="#showSignIn" text="Cancel" GridPane.halignment="RIGHT" />
+                        <Button fx:id="btn_confirm" mnemonicParsing="false" onAction="#signUp" text="Confirm" GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Label text="Confirm password" GridPane.rowIndex="4" />
+                  <TextField fx:id="tfConfirmPassword" accessibleRole="PASSWORD_FIELD" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

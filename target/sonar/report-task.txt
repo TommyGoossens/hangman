@@ -1,0 +1,6 @@
+projectKey=hangman-big-idea:hangman-big-idea
+serverUrl=http://localhost:9000
+serverVersion=7.4.0.18908
+dashboardUrl=http://localhost:9000/dashboard?id=hangman-big-idea%3Ahangman-big-idea
+ceTaskId=AWhRGbmnk8tt9VuvMAa0
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWhRGbmnk8tt9VuvMAa0

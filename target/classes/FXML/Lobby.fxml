@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxWidth="525.0" minWidth="525.0" prefHeight="600.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangmanclient.lobby.controller.LobbyController">
+   <children>
+      <GridPane maxWidth="525.0" minWidth="525.0" prefHeight="600.0" prefWidth="525.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="485.0" prefWidth="485.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="560.0" minHeight="560.0" prefHeight="560.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="275.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" percentWidth="0.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ListView fx:id="lvGames" prefHeight="200.0" prefWidth="200.0" />
+                  <GridPane GridPane.columnIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="90.0" minHeight="90.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="84.0" minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="276.0" minHeight="19.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="208.0" minHeight="40.0" prefHeight="169.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="btnLogout" mnemonicParsing="false" text="Logout" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Difficulty" />
+                              <RadioButton fx:id="rb_difficulty_easy" mnemonicParsing="false" selected="true" text="Easy" GridPane.rowIndex="1">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tgDifficulties" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="rb_difficulty_medium" mnemonicParsing="false" text="Medium" toggleGroup="$tgDifficulties" GridPane.rowIndex="2" />
+                              <RadioButton fx:id="rb_difficulty_hard" mnemonicParsing="false" text="Hard" toggleGroup="$tgDifficulties" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Line endX="100.0" startX="-100.0" GridPane.rowIndex="1" />
+                        <GridPane GridPane.rowIndex="2">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Game mode" />
+                              <RadioButton fx:id="rb_gamemode_singleplayer" mnemonicParsing="false" selected="true" text="Singleplayer" GridPane.rowIndex="1">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tg_gamemodes" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="rbGamemodeMultiplayer" mnemonicParsing="false" text="Multiplayer" toggleGroup="$tg_gamemodes" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Line endX="100.0" layoutX="111.0" layoutY="136.0" startX="-100.0" GridPane.rowIndex="3" />
+                        <Button fx:id="btnCreateGame" mnemonicParsing="false" text="Create game" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Button fx:id="btnJoingame" disable="true" mnemonicParsing="false" text="Join game" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+                        <Label text="Select a game" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                        <GridPane prefHeight="169.0" prefWidth="200.0" GridPane.rowIndex="7">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Games won:" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Games played:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Games lost:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblGamesWon" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <Label fx:id="lblGamesLost" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                              <Label fx:id="lblGamesPlayed" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                              <Label text="Player name:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets right="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="lblPlayerName" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
